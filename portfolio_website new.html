@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PorkChop Enterprises</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #e5e5e5;
+      color: #333;
+    }
+    header {
+      background: #f0f0f0;
+      color: #111;
+      padding: 2rem 1rem;
+      text-align: center;
+      border-bottom: 2px solid #ccc;
+    }
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    nav a {
+      color: #111;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 0.5rem 1rem;
+      background: #ddd;
+      border-radius: 6px;
+      transition: 0.3s;
+    }
+    nav a:hover {
+      background: #ccc;
+    }
+    section {
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 2rem;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+    h2 {
+      margin-top: 0;
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 0.5rem;
+    }
+    ul { padding-left: 1.5rem; }
+    .projects, .highlights { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; }
+    .project-card, .highlight-card { background: #f9f9f9; padding: 1rem; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
+
+    /* Slideshow styles */
+    .slideshow-container { position: relative; max-width: 100%; margin: auto; overflow: hidden; border-radius: 8px; background: #ddd; }
+    .slideshow-container img { width: 100%; display: none; border-radius: 8px; transition: opacity 1s ease-in-out; }
+    .slideshow-container img.active { display: block; opacity: 1; }
+    .prev, .next { position: absolute; top: 50%; transform: translateY(-50%); color: #111; font-weight: bold; font-size: 2rem; padding: 0 0.5rem; cursor: pointer; background: rgba(255,255,255,0.7); border-radius: 50%; user-select: none; }
+    .prev { left: 10px; }
+    .next { right: 10px; }
+    .caption { text-align: center; padding: 0.5rem; font-style: italic; color: #555; }
+
+    footer { text-align: center; padding: 2rem 0; color: #777; background: #f0f0f0; border-top: 2px solid #ccc; }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>PorkChop Enterprises</h1>
+  <p>Innovative Solutions • Media • Design • Manufacturing</p>
+  <nav>
+    <a href="#about">About Us</a>
+    <a href="#services">Services</a>
+    <a href="#projects">Projects</a>
+    <a href="#highlights">Past Highlights</a>
+    <a href="#jeepfreeks">JeepFreeks LLC</a>
+    <a href="#inductionmedia">Induction Media</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section id="about">
+  <h2>About Us</h2>
+  <p>Our studio offers a full spectrum of creative and technical services — from high-quality media production and strategic consulting to rapid 3D design, prototyping, and manufacturing — along with a range of complementary capabilities tailored to your needs. We bring expertise, agility, and a collaborative spirit to every project.</p>
+</section>
+
+<section id="services">
+  <h2>Services</h2>
+  <ul>
+    <li>Media Production & Editing</li>
+    <li>3D Printing & Rapid Prototyping</li>
+    <li>Product Design & Engineering</li>
+    <li>Branding & Creative Consulting</li>
+    <li>Custom Fabrication Projects</li>
+  </ul>
+</section>
+
+<section id="projects">
+  <h2>Projects</h2>
+  <div class="projects">
+    <div class="project-card">
+      <h3>Project One</h3>
+      <p>Description of your project goes here.</p>
+      <div class="slideshow-container">
+        <img src="images/project1a.jpg" class="active" alt="Project 1a">
+        <img src="images/project1b.jpg" alt="Project 1b">
+        <span class="prev" onclick="plusSlides(this, -1)">&#10094;</span>
+        <span class="next" onclick="plusSlides(this, 1)">&#10095;</span>
+      </div>
+      <div class="caption">Project One Caption</div>
+    </div>
+    <div class="project-card">
+      <h3>Project Two</h3>
+      <p>Description of your project goes here.</p>
+      <div class="slideshow-container">
+        <img src="images/project2a.jpg" class="active" alt="Project 2a">
+        <img src="images/project2b.jpg" alt="Project 2b">
+        <span class="prev" onclick="plusSlides(this, -1)">&#10094;</span>
+        <span class="next" onclick="plusSlides(this, 1)">&#10095;</span>
+      </div>
+      <div class="caption">Project Two Caption</div>
+    </div>
+  </div>
+</section>
+
+<section id="highlights">
+  <h2>Past Project Highlights</h2>
+  <div class="highlights">
+    <div class="highlight-card">
+      <h3>Highlight 1</h3>
+      <div class="slideshow-container">
+        <img src="images/highlight1a.jpg" class="active" alt="Highlight 1a">
+        <img src="images/highlight1b.jpg" alt="Highlight 1b">
+        <span class="prev" onclick="plusSlides(this, -1)">&#10094;</span>
+        <span class="next" onclick="plusSlides(this, 1)">&#10095;</span>
+      </div>
+      <div class="caption">Highlight Caption</div>
+    </div>
+  </div>
+</section>
+
+<section id="jeepfreeks">
+  <h2>JeepFreeks LLC</h2>
+  <div class="slideshow-container">
+    <img src="images/jeep1.jpg" class="active" alt="JeepFreeks 1">
+    <img src="images/jeep2.jpg" alt="JeepFreeks 2">
+    <span class="prev" onclick="plusSlides(this, -1)">&#10094;</span>
+    <span class="next" onclick="plusSlides(this, 1)">&#10095;</span>
+  </div>
+  <div class="caption">JeepFreeks Gallery</div>
+</section>
+
+<section id="inductionmedia">
+  <h2>Induction Media</h2>
+  <div class="slideshow-container">
+    <img src="images/induction1.jpg" class="active" alt="Induction Media 1">
+    <img src="images/induction2.jpg" alt="Induction Media 2">
+    <span class="prev" onclick="plusSlides(this, -1)">&#10094;</span>
+    <span class="next" onclick="plusSlides(this, 1)">&#10095;</span>
+  </div>
+  <div class="caption">Induction Media Gallery</div>
+</section>
+
+<section id="contact">
+  <h2>Contact Us</h2>
+  <p>Email: contact@porkchopenterprises.com<br>
+  GitHub: <a href="#" target="_blank">Visit our GitHub</a><br>
+  Facebook: <a href="#" target="_blank">Facebook Page</a><br>
+  Instagram: <a href="#" target="_blank">Instagram Profile</a></p>
+</section>
+
+<footer>
+  © 2025 PorkChop Enterprises — All Rights Reserved
+</footer>
+
+<script>
+function plusSlides(el, n) {
+  const container = el.parentElement;
+  const slides = container.getElementsByTagName('img');
+  let index = 0;
+  for(let i=0;i<slides.length;i++){ if(slides[i].classList.contains('active')){ index=i; slides[i].classList.remove('active'); break; }}
+  index += n;
+  if(index >= slides.length) index = 0;
+  if(index < 0) index = slides.length-1;
+  slides[index].classList.add('active');
+}
+
+// Auto-play slideshows every 5 seconds
+setInterval(() => {
+  const slideshows = document.querySelectorAll('.slideshow-container');
+  slideshows.forEach(slideshow => plusSlides(slideshow.querySelector('.next'), 1));
+}, 5000);
+</script>
+
+</body>
+</html>
